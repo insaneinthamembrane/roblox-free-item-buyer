@@ -22,7 +22,7 @@ def fetch_items() -> None:
 
     while cursor is not None:
         req = session.get(
-            f"https://catalog.roblox.com/v1/search/items/details?creatorTargetId=1&limit=30&maxPrice=0&cursor={cursor}"
+            f"https://catalog.roblox.com/v1/search/items/details?category=All&creatorTargetId=1&limit=30&maxPrice=0&cursor={cursor}"
         )
         res = req.json()
 
