@@ -4,7 +4,7 @@ import time
 import requests
 from rich.console import Console
 
-cookie = pathlib.Path("cookie.txt").read_text()
+cookie = pathlib.Path("cookie.txt").read_text().strip()
 
 session = requests.Session()
 session.cookies.update({".ROBLOSECURITY": cookie})
